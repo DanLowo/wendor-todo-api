@@ -1,6 +1,5 @@
 import { Sequelize } from 'sequelize-typescript';
 import {TodoEntity} from "../../../todos/entity/todo.entity";
-import {dbURL} from "../../database.module";
 
 export const databaseProviders = [
     {
@@ -8,7 +7,7 @@ export const databaseProviders = [
         useFactory: async () => {
             const sequelize = new Sequelize({
                 dialect: 'sqlite',
-                storage: dbURL.prod2
+                storage: "./database.sqlite"
             });
             sequelize.addModels([TodoEntity]);
             await sequelize.sync();
