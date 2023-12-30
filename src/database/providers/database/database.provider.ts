@@ -7,7 +7,7 @@ export const databaseProviders = [
         useFactory: async () => {
             const sequelize = new Sequelize({
                 dialect: 'sqlite',
-                storage: "./database.sqlite"
+                storage: "./db_from_firebase.sqlite"
             });
             sequelize.addModels([TodoEntity]);
             await sequelize.sync();
