@@ -3,6 +3,9 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "assets": [
+      { "include": "/config/wendor-dc3ab-firebase-adminsdk-kr3ye-4294c190b7.json","watchAssets": true }
+    ]
   }
 }
